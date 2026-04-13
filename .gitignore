@@ -1,0 +1,43 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Docker
+.dockerignore
+
+# Kubernetes secrets (never commit real secrets)
+*-secret.yaml
+*-secrets.yaml
+
+# Helm
+charts/
+*.tgz
+
+# Temporary files
+tmp/
+temp/
+kubectl
+
+PROJECT_CONTEXT.md
