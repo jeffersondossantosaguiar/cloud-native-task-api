@@ -1,7 +1,9 @@
 import express from "express"
+import taskRoutes from "./routes/tasks.router"
 
 const app = express()
 app.use(express.json())
+app.use("/tasks", taskRoutes)
 
 app.get("/healthz", (req, res) => {
   res.status(200).json({ status: "ok" })
