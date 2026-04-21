@@ -1,0 +1,13 @@
+replicas: 1
+imagePullSecrets:
+  name: ghcr-secret
+image:
+  repository: ghcr.io/jeffersondossantosaguiar/task-api
+  tag: latest
+resources:
+  requests:
+    memory: "128Mi"
+    cpu: "100m"
+  limits:
+    memory: "256Mi"
+    cpu: "200m"
