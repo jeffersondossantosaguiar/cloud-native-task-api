@@ -3,7 +3,7 @@ imagePullSecrets:
   name: ghcr-secret
 image:
   repository: ghcr.io/jeffersondossantosaguiar/task-api
-  tag: latest
+  tag: v1.0.0
 resources:
   requests:
     memory: "128Mi"
@@ -11,3 +11,6 @@ resources:
   limits:
     memory: "256Mi"
     cpu: "200m"
+config:
+  dbHost: postgres
+  dbName: taskdb
