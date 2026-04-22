@@ -154,7 +154,7 @@ cloud-native-task-api/
 - [x] **Phase 0** — Environment setup (Docker, kubectl, kind, Helm)
 - [x] **Phase 1** — Node.js API with TypeScript + Dockerfile
 - [x] **Phase 2** — Core Kubernetes (Deployment, Service, ConfigMap, Secret, Ingress, StatefulSet)
-- [ ] **Phase 3** — Production practices (HPA, Probes, Limits, Helm chart, Redis)
+- [x] **Phase 3** — Production practices (HPA, Probes, Limits, Helm chart, Redis)
 - [ ] **Phase 4** — CI/CD with GitHub Actions
 
 ---
