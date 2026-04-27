@@ -155,7 +155,7 @@ cloud-native-task-api/
 - [x] **Phase 1** — Node.js API with TypeScript + Dockerfile
 - [x] **Phase 2** — Core Kubernetes (Deployment, Service, ConfigMap, Secret, Ingress, StatefulSet)
 - [x] **Phase 3** — Production practices (HPA, Probes, Limits, Helm chart, Redis)
-- [ ] **Phase 4** — CI/CD with GitHub Actions
+- [x] **Phase 4** — CI/CD with GitHub Actions
 
 ---
 

@@ -1,0 +1,28 @@
+name: CD
+
+on:
+  workflow_run:
+    workflows: ["CI"]
+    types:
+      - completed
+jobs:
+  deploy:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v6
+
+      # TEÓRICO — em produção o kubeconfig viria de um secret do cluster na cloud
+      - name: Configure kubeconfig
+        run: |
+          mkdir -p $HOME/.kube
+          echo "${{ secrets.KUBECONFIG }}" > $HOME/.kube/config
+
+      - name: Install Helm
+        uses: azure/setup-helm@v5.0.0
+
+      - name: Deploy via Helm
+        run: |
+          helm upgrade task-api helm/task-api/ \
+            --set image.tag=${{ github.event.workflow_run.head_sha }}
